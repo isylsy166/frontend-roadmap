@@ -1,0 +1,19 @@
+.frame{
+    width: 1000px;
+    height: 500px;
+    background-color: pink;
+    position: relative;
+}
+
+.cursor{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none; /* 커서 요소와의 상호작용 방지 */
+    background: url(/public/images/butterfly.gif)no-repeat;
+    background-size: 100%;
+}
