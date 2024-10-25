@@ -31,7 +31,7 @@ export default function FollowMouse({chiledren}) {
 
   return (
     <div id='followMouse' className={style.frame}>
-      <h1>FollowMouse</h1>
+      <h1><FollowMousee></FollowMousee></h1>
       <div id='cursor' className={style.cursor}></div>
       {chiledren}
     </div>
