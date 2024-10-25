@@ -1,39 +1,46 @@
-import React, { useEffect } from 'react'
-import style from '../../css/commons/followMouse.module.css'
+import React, { useEffect } from 'react';
+import style from '../../css/commons/followMouse.module.css';
 
-export default function FollowMouse({chiledren}) {
+export default function FollowMouse({ children }) {
 
-  
   useEffect(() => {
-    
     const page = document.getElementById('followMouse');
-    const text = document.querySelector('h1');
     const cursor = document.getElementById('cursor');
 
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    const speed = 0.07;
+
     const handleMouseMove = (e) => {
-      if (e.target === page || page.contains(e.target)) {
-        // 마우스가 페이지 안에 있을 때만 좌표와 커서 업데이트
-        text.innerText = `x: ${e.pageX} y: ${e.pageY}`;
-        cursor.style.left = e.pageX + 'px';
-        cursor.style.top = e.pageY + 'px';
-      }
+      targetX = e.pageX;
+      targetY = e.pageY;
+    };
+
+    const animateCursor = () => {
+      currentX += (targetX - currentX) * speed;
+      currentY += (targetY - currentY) * speed;
+
+      cursor.style.left = `${currentX}px`;
+      cursor.style.top = `${currentY}px`;
+
+      requestAnimationFrame(animateCursor);
     };
 
     page.addEventListener("mousemove", handleMouseMove);
+    animateCursor();  // 애니메이션 시작
 
     // 컴포넌트 언마운트 시 이벤트 리스너 제거
     return () => {
       page.removeEventListener("mousemove", handleMouseMove);
     };
-
-  }, [])
-
+  }, []);
 
   return (
     <div id='followMouse' className={style.frame}>
-      <h1><FollowMousee></FollowMousee></h1>
       <div id='cursor' className={style.cursor}></div>
-      {chiledren}
+      {children}
     </div>
-  )
+  );
 }
