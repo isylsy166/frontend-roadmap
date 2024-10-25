@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
-import style from '../../css/commons/followMouse.module.css';
+import React, { useEffect, useState } from 'react';
+import style from '../../styles/css/commons/followMouse.module.css';
+import { Cursor } from '../../styles/emotion/followMouse.style';
 
-export default function FollowMouse({ children }) {
+
+export default function FollowMouse({ children, isHover  }) {
 
   useEffect(() => {
     const page = document.getElementById('followMouse');
@@ -39,7 +41,7 @@ export default function FollowMouse({ children }) {
 
   return (
     <div id='followMouse' className={style.frame}>
-      <div id='cursor' className={style.cursor}></div>
+      <Cursor id='cursor' isHover={isHover}/>
       {children}
     </div>
   );
