@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import style from '../../css/commons/followMouse.module.css'
 
-export default function FollowMouse() {
+export default function FollowMouse({chiledren}) {
 
   
   useEffect(() => {
@@ -33,6 +33,7 @@ export default function FollowMouse() {
     <div id='followMouse' className={style.frame}>
       <h1>FollowMouse</h1>
       <div id='cursor' className={style.cursor}></div>
+      {chiledren}
     </div>
   )
 }
