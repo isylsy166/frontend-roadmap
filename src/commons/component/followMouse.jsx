@@ -23,10 +23,10 @@ export default function FollowMouse({ children, isHover  }) {
     const animateCursor = () => {
       currentX += (targetX - currentX) * speed;
       currentY += (targetY - currentY) * speed;
-
+    
       cursor.style.left = `${currentX}px`;
       cursor.style.top = `${currentY}px`;
-
+    
       requestAnimationFrame(animateCursor);
     };
 

@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
 
 // 아래로 이동하는 애니메이션을 정의합니다.
-export const dropAnimation = keyframes`
+const dropAnimation = keyframes`
   0% {
     transform: translateY(80px);
     opacity: 0;
@@ -14,7 +14,7 @@ export const dropAnimation = keyframes`
 `;
 
 // 텍스트가 서서히 나타나는 애니메이션을 정의합니다.
-export const fadeIn = keyframes`
+const fadeIn = keyframes`
   0% {
     opacity: 0;
   }
@@ -35,6 +35,7 @@ export const Circle = styled.div`
 `;
 
 export const AnimatedText = styled.h1`
+    font-family: 'MonoplexKRWide-BoldItalic';
     font-size: ${props => props.size};
     color: white;
     margin: 0px 0px;
