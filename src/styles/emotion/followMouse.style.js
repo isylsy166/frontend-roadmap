@@ -30,5 +30,4 @@ export const Cursor = styled.div`
     pointer-events: none; /* 커서 요소와의 상호작용 방지 */
     background-color: #ffc0cbc6;
     animation: ${props => props.isHover ? sizeUp : sizeDown} 0.5s ease-in-out forwards;
-
 `
