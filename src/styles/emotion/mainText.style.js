@@ -4,7 +4,7 @@ import { keyframes } from '@emotion/react';
 // 아래로 이동하는 애니메이션을 정의합니다.
 export const dropAnimation = keyframes`
   0% {
-    transform: translateY(-20px);
+    transform: translateY(80px);
     opacity: 0;
   }
   100% {
