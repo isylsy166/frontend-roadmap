@@ -3,3 +3,9 @@
     height: 100vh;
     background-color: #272727;
 }
+
+@media (max-width: 580px) {
+    .frame {
+
+    }
+}
