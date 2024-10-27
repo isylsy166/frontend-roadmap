@@ -6,8 +6,12 @@ import IconImageBox from './iconImageBox';
 
 export default function MainText({isHover, setIsHover }) {
 
-    const isPc = useMediaQuery({ minWidth:581 });
-    const isMobile = useMediaQuery({ maxWidth: 580 });
+    const isPc = useMediaQuery({
+        query: "(min-width:581px)"
+      });
+      const isMobile = useMediaQuery({
+        query: "(max-width:580px)"
+      });
     const textSize = isPc ? '70px' : isMobile ? '45px' : '70px';
 
     return (

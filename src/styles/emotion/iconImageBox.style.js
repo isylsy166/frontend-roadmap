@@ -14,7 +14,7 @@ export const dropUp = keyframes`
 `;
 
 export const Frame = styled.div`
-    width: 1200px;
+    width: ${props => props.width};
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,8 +22,8 @@ export const Frame = styled.div`
 `
 
 export const Icon = styled.img`
-    width: 100px;
-    height: 100px;
+    width: ${props => props.size};
+    height: ${props => props.size};
     border-radius: 50%;
     border: 3px solid white;
     opacity: 0;
