@@ -9,6 +9,7 @@ export default function IconImageBox() {
   const width = isPc ? '1200px' : isMobile ? '95%' : '1200px';
   const size = isPc ? '100px' : isMobile ? '40px' : '60px';
 
+
   return (
     <Frame width={width}>
         <Icon delay={3.0} size={size} src='/images/html5_1IJr1hb.webp' />

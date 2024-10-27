@@ -36,5 +36,4 @@ export const Title = styled.p`
 export const Content = styled.pre`
   margin: 5px 0px;
   font-size: 12px;
-  white-space: pre-wrap;
 `
