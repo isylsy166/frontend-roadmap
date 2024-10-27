@@ -12,7 +12,9 @@ export default function MainText({isHover, setIsHover }) {
       const isMobile = useMediaQuery({
         query: "(max-width:580px)"
       });
-    const textSize = isPc ? '70px' : isMobile ? '45px' : '70px';
+
+    const textSize = isPc ? '70px' : isMobile ? '35px' : '70px';
+
 
     return (
     <div className={style.frame}>
