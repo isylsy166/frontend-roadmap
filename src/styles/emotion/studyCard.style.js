@@ -1,32 +1,49 @@
 import styled from '@emotion/styled';
 import { keyframes, css } from '@emotion/react';
 
-const fadeIn = keyframes`
-  0% {
-    transform: translateX(80px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(-200px);
-    opacity: 1;
+export const CardContainer = styled.div`
+  perspective: 800px;
+  width: 300px;
+  height: 300px;
+
+`;
+
+export const Card = styled.div`
+  display: inline-grid;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  transform: ${({ isHovered }) => (isHovered ? 'rotateY(180deg)' : 'rotateY(0deg)')};
+  cursor: pointer;
+
+  & > * {
+    grid-area: 1 / 1 / 1 / 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    backface-visibility: hidden;
   }
 `
 
-export const Frame = styled.div`
-    width: 300px;
-    height: 500px;
-    background-color: white;
-    border-radius: 10px;
+
+export const Thumbnail = styled.div`
+  width: 200px;
+  height: 200px;
+  background-color: lightgray;
+  border-radius: 45px;
+  background: url(${props => props.image}) no-repeat;
+  background-size: 100%;
 `
 
-export const Title = styled.h1`
-    font-family: 'MonoplexKRWide-BoldItalic';
-    color: white;
-    font-size: 70px;
-    position: absolute;
-    transform: translate(-50%, 0%);
-    top: 8%;
-    left: 50%;
-    opacity: ${props => (props.show ? 1 : 0)}; // show에 따라 opacity 설정
-    animation: ${props => props.show ? css`${fadeIn} 2.5s ease-in-out forwards` : 'none'};
+export const Title = styled.p`
+  font-size: 22px;
+  font-weight: bold;
+  
+`
+
+export const Content = styled.pre`
+  font-size: 15px;
 `
