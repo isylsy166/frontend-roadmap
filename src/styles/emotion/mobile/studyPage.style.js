@@ -26,7 +26,7 @@ export const Frame = styled.div`
 export const Title = styled.h1`
     font-family: 'MonoplexKRWide-BoldItalic';
     color: white;
-    font-size: 60px;
+    font-size: 38px;
     opacity: ${props => (props.show ? 1 : 0)}; // show에 따라 opacity 설정
     animation: ${props => props.show ? css`${fadeIn} 2.5s ease-in-out forwards` : 'none'};
 `
@@ -37,4 +37,6 @@ export const CardBox = styled.div`
     align-items: center;
     justify-content: space-between;
     height: 500px;
+    box-sizing: border-box;
+    padding: 10px 10px;
 `

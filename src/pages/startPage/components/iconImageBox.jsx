@@ -6,8 +6,8 @@ export default function IconImageBox() {
 
   const isPc = useMediaQuery({ minWidth:581 });
   const isMobile = useMediaQuery({ maxWidth: 580 });
-  const width = isPc ? '1200px' : isMobile ? '500px' : '1200px';
-  const size = isPc ? '100px' : isMobile ? '45px' : '60px';
+  const width = isPc ? '1200px' : isMobile ? '95%' : '1200px';
+  const size = isPc ? '100px' : isMobile ? '40px' : '60px';
 
   return (
     <Frame width={width}>

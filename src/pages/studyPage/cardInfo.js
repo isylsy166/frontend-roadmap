@@ -2,7 +2,7 @@ export const cardInfo = [
     {
         image: '/images/JS_icon.png',
         title: 'Modern JavaScript',
-        content: '자바스크립트의 기본 개념 부터 동작 원리까지\n공부하며 정리한 내용입니다.',
+        content: '자바스크립트의 기본 개념 부터 동작 원리까지 공부하며 정리한 내용입니다.',
         url: 'https://accidental-thumb-deb.notion.site/Modern-JavaScript-10e7bb3b3a0f80968c26d87f695af7ff'
     },
     {
