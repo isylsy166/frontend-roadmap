@@ -1,0 +1,38 @@
+.card{
+    display: inline-grid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 1.2s;
+    transform: perspective(800px) rotateY(0deg);
+    transform-style: preserve-3d;
+    will-change: transform; 
+}
+
+.card:hover{
+    transform: perspective(800px) rotateY(180deg) translateZ(0);
+}
+
+.card > * {
+    grid-area: 1 / 1 / 1 / 1;
+    width: 300px;
+    height: 300px;
+    padding: 12px;
+    border-radius: 8px;
+    backface-visibility: hidden;
+}
+
+.cardFront {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardBack {
+    display: flex;
+    background-color: #343434;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    transform: rotateY(180deg); /* 글자 뒤집히지 않게*/
+}

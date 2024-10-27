@@ -14,9 +14,11 @@ const fadeIn = keyframes`
 
 const showCardBox = keyframes`
   0% {
+    transform: translateY(100px);
     opacity: 0;
   }
   100% {
+  transform: translateY(0);
     opacity: 1;
   }
 `;
@@ -45,7 +47,7 @@ export const CardBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 985px;
+    width: 1100px;
     opacity: 0;
-    animation: ${props => props.show ? css`${showCardBox} 3.5s ease-in-out forwards` : 'none'};
+    animation: ${props => props.show ? css`${showCardBox} 2.5s ease-in-out forwards` : 'none'};
 `
