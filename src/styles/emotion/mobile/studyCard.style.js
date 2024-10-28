@@ -9,6 +9,8 @@ export const Card = styled.div`
   align-items: center;
   border-radius: 20px;
   background-color: white;
+  box-sizing: border-box;
+  padding: 0px 15px;
 `
 
 export const Thumbnail = styled.div`
@@ -36,4 +38,5 @@ export const Title = styled.p`
 export const Content = styled.pre`
   margin: 5px 0px;
   font-size: 12px;
+   white-space: pre-wrap;
 `

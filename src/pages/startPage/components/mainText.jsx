@@ -3,8 +3,11 @@ import style from '../../../styles/css/layout/mainText.module.css';
 import { useMediaQuery } from 'react-responsive';
 import { AnimatedText, Circle } from '../../../styles/emotion/mainText.style';
 import IconImageBox from './iconImageBox';
+import { useNavigate } from "react-router-dom";
 
 export default function MainText({isHover, setIsHover }) {
+
+    const navigate = useNavigate();
 
     const isPc = useMediaQuery({
         query: "(min-width:581px)"
@@ -27,7 +30,8 @@ export default function MainText({isHover, setIsHover }) {
 
         <div className={style.textBox}
             onMouseOver={() => setIsHover(true)}
-            onMouseOut={() => setIsHover(false)}>
+            onMouseOut={() => setIsHover(false)}
+            onClick={() => navigate('/roadmap')}>
           <AnimatedText size={textSize}>Frontend Devloper</AnimatedText>
           <AnimatedText size={textSize}>Roadmap</AnimatedText>
         </div>

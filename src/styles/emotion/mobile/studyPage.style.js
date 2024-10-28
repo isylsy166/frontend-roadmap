@@ -37,6 +37,4 @@ export const CardBox = styled.div`
     align-items: center;
     justify-content: space-between;
     height: 500px;
-    box-sizing: border-box;
-    padding: 10px 10px;
 `
