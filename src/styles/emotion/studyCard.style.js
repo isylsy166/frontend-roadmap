@@ -46,4 +46,5 @@ export const Title = styled.p`
 
 export const Content = styled.pre`
   font-size: 15px;
+   white-space: pre-wrap;
 `
